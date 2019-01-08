@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="splash-screen" class="splashScreen">
+      <div class="main-title">
+        <h1 class="title">Super Píkara</h1>
+        <p class="game-body">¡Atrévete a vencer a un machirulo!</p>
+      </div>
+        <img src="img/katana-girl.png" class="katana-img">
+        
+     <div class="btn-splash">
+    <button id="btn-start" class="start-splash">START GAME!</button>
+</div>
+</div>
+<div id="introduction-screen" class="introductionScreen">
+    <div class="main-title">
+      <h1 class="title">Pikara</h1>
+    <p>El juego consiste en convencer al mayor número de machirulos posibles.
+      Escoge a tu enemigo y enfréntate a una batalla dialéctica sin igual!
+      Ganará el que más batallas gane!
+    </p>
+    </div>
+    <div class="btn-splash">
+        <button id="btn-map" class="start-splash">START GAME!</button>
+        </div>
+</div>
+<div id="map-screen" class="mapScreen">
+   
+    <div class="btn-splash">
+        <button id="id1" class="start-splash">Character 1</button>
+    </div>
+    <div class="btn-splash">
+        <button id="id2" class="start-splash">Character 2</button>
+    </div>
+    <div class="btn-splash">
+        <button id="id3" class="start-splash">Character 3</button>
+    </div>
+</div>
+<div id="battle1" class="battle">
+    <h1>Battle 1</h1>
+          <div id="quiz1" class="Quiz1">
+            <div class="flex">
+            <div class="field">Score</div>
+            <div id="score" class="field score">0</div>
+          </div>
+          <div class="flex">
+            <div class="field">Question</div>
+            <div class="question field"></div>
+          </div>
+          <div class="flex">
+            <div class="field">Answer A</div>
+            <button class="button-field answerA"></button>
+          </div>
+          <div class="flex">
+            <div class="field">Answer B</div>
+            <button class="button-field answerB"></button>
+          </div>
+          <div class="flex">
+            <div class="field">Answer C</div>
+            <button class="button-field answerC"></button>
+          </div>
+        </div>
+    </div>
+</div> 
+<!-- <div id="battle2" class="battle">
+        <h1>Battle 2</h1>
+        <div id="quiz2" class="Quiz2">
+         <div class="flex">
+            <div class="field">Score</div>
+            <div id="score" class="field score">0</div>
+          </div>
+          <div class="flex">
+            <div class="field">Question</div>
+            <div class="question field"></div>
+          </div>
+          <div class="flex">
+            <div class="field">Answer A</div>
+            <button class="button-field answerA" onclick="answerA_clicked()"></button>
+          </div>
+          <div class="flex">
+            <div class="field">Answer B</div>
+            <button class="button-field answerB" onclick="answerB_clicked()"></button>
+          </div>
+          <div class="flex">
+            <div class="field">Answer C</div>
+            <button class="button-field answerC" onclick="answerC_clicked()"></button>
+          </div>
+        </div>
+      </div>
+</div>
+<div id="battle3" class="battle">
+        <h1>Battle 3</h1>
+       <div id="quiz3" class="Quiz3">
+        <div class="flex">
+            <div class="field">Score</div>
+            <div id="score" class="field score">0</div>
+          </div>
+          <div class="flex">
+            <div class="field">Question</div>
+            <div class="question field"></div>
+          </div>
+          <div class="flex">
+            <div class="field">Answer A</div>
+            <button class="button-field answerA" onclick="answerA_clicked()"></button>
+          </div>
+          <div class="flex">
+            <div class="field">Answer B</div>
+            <button class="button-field answerB" onclick="answerB_clicked()"></button>
+          </div>
+          <div class="flex">
+            <div class="field">Answer C</div>
+            <button class="button-field answerC" onclick="answerC_clicked()"></button>
+          </div>
+        </div>
+        </div>
+</div>    -->
+<div id="win-Screen" class="winScreen">
+    <h1>Win Screen</h1>
+</div>
+<div id="GameOver-screen" class="gaveOverScreen"> 
+    <h1>Game Over screen</h1>
+</div>
+<script src="javascript/main.js"></script>
+<script src="javascript/Quiz.js"></script>
+<script src="javascript/Battle.js"></script>
+<script src="javascript/game.js"></script>
+
+</body>
+</html>

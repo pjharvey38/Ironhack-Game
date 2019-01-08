@@ -2,7 +2,7 @@
 Aún por definir.
 
 ## Description
-La lucha de insultos de Monkey Island aplicada a la lucha feminista. Un personaje femenino se va encontrando con distintos marichulos y personajes machistas a los que tiene que ganar con argumentos de peso para el movimiento feminista. Gana cuando ha conseguido convertir al mayor número de oponentes.
+La lucha de insultos de Monkey Island aplicada a la lucha feminista. Un personaje femenino se va encontrando con distintos machirulos y personajes machistas a los que tiene que ganar con argumentos de peso para el movimiento feminista. Gana cuando ha conseguido convertir al mayor número de oponentes.
 La protagonista va enfrentándose a distintos personajes machistas.
 Cada enfrentamiento es una batalla diferente.
 En cada batalla, el personaje machista expresa su opinión machista y ante ello la protagonista se defiende con preguntas perspicaces.
