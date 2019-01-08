@@ -7,18 +7,20 @@ let btnIntroduction = document.getElementById("btn-map");
 let id1 = document.getElementById("id1");
 let id2 = document.getElementById("id2");
 let id3 = document.getElementById("id3");
-let battle1 = document.getElementById("battle1");
-let battle2 = document.getElementById("battle2");
-let battle3 = document.getElementById("battle3");
-let battle = document.getElementsByClassName("battle");
+let battle = document.getElementById("battle");
+// let battle2 = document.getElementById("battle2");
+// let battle3 = document.getElementById("battle3");
+
 let winScreen = document.getElementById("win-Screen");
 let gameOver = document.getElementById("gameOver-screen");
-let quiz1 = document.getElementById("quiz1");
-let quiz2 = document.getElementById("quiz2");
-let quiz3 = document.getElementById("quiz3");
+let quiz = document.getElementById("quiz");
+
 let answerA = document.getElementById("answerA");
 let answerB = document.getElementById("answerB");
 let answerC = document.getElementById("answerC");
+let enemy1 = document.getElementById("enemy1");
+let enemy2 = document.getElementById("enemy2");
+let enemy3 = document.getElementById("enemy3");
 
 function setIntroductionScreen() {
     splashScreen.style.display= "none";
@@ -29,38 +31,35 @@ function setMapScreen() {
     mapScreen.style.display = "flex";
 }
 
-function setQuiz1 () {
-    quiz1.style.display = "block";
-}
-function setQuiz2 () {
-    quiz2.style.display = "block";
+function setQuiz () {
+    quiz.style.display = "block";
 }
 
-function setQuiz3() {
-    quiz3.style.display = "block";
-}
 function setBattle1 () {
     mapScreen.style.display = "none"; 
-    battle1.style.display = "block";
-        setQuiz1();
+    battle.style.display = "block";
+    enemy1.style.display = "block";
+        setQuiz();
         Quiz();
         
 
 }
 function setBattle2 () {
     mapScreen.style.display = "none"; 
-    battle2.style.display = "block";
+    battle.style.display = "block";
+    enemy2.style.display = "block";
     setTimeout(function () {
-        setQuiz2();
+        setQuiz();
         Quiz();
         
     },5000);
 }
 function setBattle3 () {
     mapScreen.style.display = "none"; 
-    battle3.style.display = "block";
+    battle.style.display = "block";
+    enemy3.style.display = "block";
     setTimeout(function () {
-        setQuiz3();
+        setQuiz();
         Quiz();
         
     },5000);
@@ -119,16 +118,16 @@ id3.addEventListener("click", function() {
     setBattle3();
 })
 
-answerA.addEventListener("click", function (){
-    checkAnswer(answerA);
-})
+// answerA.addEventListener("click", function (){
+//     checkAnswer(answerA);
+// })
 
-answerB.addEventListener("click", function (){
-    checkAnswer(answerB);
-})
-answerA.addEventListener("click", function (){
-    checkAnswer(answerC);
-})
+// answerB.addEventListener("click", function (){
+//     checkAnswer(answerB);
+// })
+// answerA.addEventListener("click", function (){
+//     checkAnswer(answerC);
+// })
 //lógica juego
 
 // pantalla, botón start/

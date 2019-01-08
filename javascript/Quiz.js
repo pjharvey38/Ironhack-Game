@@ -52,13 +52,15 @@ function getRandomQuestionSet(number){
     
 }
 
+
+	
+
 function btnProvideQuestion() { 
   var questionSet = getRandomQuestionSet(3);
-console.log(questionSet)
-var randomNumber = Math.floor(Math.random()*questionSet.length);
-	randomQuestion = questionSet[randomNumber]; //getQuestion
-console.log(randomQuestion.question);
-	
+  console.log(questionSet)
+  var randomNumber = Math.floor(Math.random()*questionSet.length);
+    randomQuestion = questionSet[randomNumber]; //getQuestion
+  console.log(randomQuestion.question);
   answers = [randomQuestion.rightAnswer, randomQuestion.wrongAnswer1, randomQuestion.wrongAnswer2];
   shuffle(answers);
   

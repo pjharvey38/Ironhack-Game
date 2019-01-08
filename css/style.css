@@ -65,7 +65,7 @@ p {
 
 }
 
-.battle {
+.Battle {
     display: none;
 }
 
@@ -155,4 +155,16 @@ button:active {
     display: inline-block;
 
     
+    }
+
+    .Enemy1 {
+        display: none;
+    }
+    
+    .Enemy2 {
+        display: none;
+    }
+    
+    .Enemy3 {
+        display: none;
     }

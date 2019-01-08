@@ -43,32 +43,41 @@
         <button id="id3" class="start-splash">Character 3</button>
     </div>
 </div>
-<div id="battle1" class="battle">
-    <h1>Battle 1</h1>
-          <div id="quiz1" class="Quiz1">
+<div id="battle" class="Battle">
+    <h1>Battle</h1>
+        <div id="enemy1" class="Enemy1">
+          <h1>Pikara against Enemy1<h1>
+        </div>
+        <div id="enemy2" class="Enemy2">
+          <h1>Pikara against Enemy2</h1>
+        </div>
+        <div id="enemy3" class="Enemy3">
+          <h1>Pikara against Enemy3</h1>
+        </div>
+          <div id="quiz" class="Quiz1">
             <div class="flex">
             <div class="field">Score</div>
             <div id="score" class="field score">0</div>
           </div>
           <div class="flex">
             <div class="field">Question</div>
-            <div class="question field"></div>
+            <div id="question" class="field"></div>
           </div>
           <div class="flex">
             <div class="field">Answer A</div>
-            <button class="button-field answerA"></button>
+            <button id="answerA" class="button-field" onclick="answerA_clicked()"></button>
           </div>
           <div class="flex">
             <div class="field">Answer B</div>
-            <button class="button-field answerB"></button>
+            <button id="answerB" class="button-field" onclick="answerB_clicked()"></button>
           </div>
           <div class="flex">
             <div class="field">Answer C</div>
-            <button class="button-field answerC"></button>
+            <button id="answerC" class="button-field" onclick="answerC_clicked()"></button>
           </div>
         </div>
     </div>
-</div> 
+
 <!-- <div id="battle2" class="battle">
         <h1>Battle 2</h1>
         <div id="quiz2" class="Quiz2">
@@ -127,9 +136,9 @@
 <div id="GameOver-screen" class="gaveOverScreen"> 
     <h1>Game Over screen</h1>
 </div>
-<script src="javascript/main.js"></script>
+
 <script src="javascript/Quiz.js"></script>
-<script src="javascript/Battle.js"></script>
+
 <script src="javascript/game.js"></script>
 
 </body>
