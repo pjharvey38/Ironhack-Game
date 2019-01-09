@@ -17,7 +17,10 @@ quiz[11] = new Question("Who is the king of Spain?", "Felipe VI", "Willem-Alexze
 quiz[12] = new Question("What is 12-2?", "10", "2", "4");
 quiz[13] = new Question("What was Picasso?", "Artist", "Baker", "Jobless");
 quiz[14] = new Question("Si volvieras solo a casa por la noche y te encontraras con una mujer y notaras su miedo al sentirte, qué harías?", "Cambiar de acera y adelantarme para que me vea y así vaya más tranquila viendo que no le voy a hacer nada", "Decirle que tranquila, que no le voy a hacer nada", "Decirle guapa para que vea que la aprecio.");
-quiz[14] = new Question("El ocho de marzo se celebra el día de la mujer trabajadora, sabes porqué se celebra ese día?", "ni idea, ni me importa ni creo que sea importante", "Porque ese día las mujeres de todo el mundo salieron a la calle por primera vez", "porque así lo decidió la Conferencia Internacional de Mujeres en 1910 a propuesta de Clara Zetkin, una activista alemana por los derechos de la mujer.");
+quiz[15] = new Question("El ocho de marzo se celebra el día de la mujer trabajadora, sabes porqué se celebra ese día?", "ni idea, ni me importa ni creo que sea importante", "Porque ese día las mujeres de todo el mundo salieron a la calle por primera vez", "porque así lo decidió la Conferencia Internacional de Mujeres en 1910 a propuesta de Clara Zetkin, una activista alemana por los derechos de la mujer.");
+quiz[16] = new Question("Cuando silbas a una chica por la calle, lo haces por...", "demostrar ante el resto de hombres lo hombre que soy", "porque soy un romántico empedernido y sé que a las mujeres les encanta", "un buen cumplido no le sienta mal a nadie, no?");
+quiz[17] = new Question("Todas las mujeres son unas brujas", "Para nada, si se pelean entre ellas es para ejercer algún tipo de poder en la sombra, es a lo que las ha acostumbrado el sistema patriarcal en el que hemos crecido", "por supuesto, todas las mujeres son unas brujas, solo se critican entre ellas y quieren casarse a la primera de cambio", "para bruja tu madre!");
+
 
 var randomQuestion;
 var answers = [];
@@ -26,9 +29,7 @@ var totalScore = 0;
 var numBattles = 0;
 var battlesWon = 0;
 var score = document.getElementById("score");
-var battlesPlayed = document.getElementById("battles-played");
-var batllesWon = document.getElementById("battles-won");
-var twoBattlesWon = document.getElementById("2-battlesWon");
+
 
 
 document.addEventListener("DOMContentLoaded", function(event) { 
@@ -65,10 +66,11 @@ function getRandomQuestionSet(number){
     })
     
 }
-var questionSet = getRandomQuestionSet(14);
-console.log(questionSet)
+
 
 function btnProvideQuestion() { 
+  var questionSet = getRandomQuestionSet(3);
+console.log(questionSet)
 
     var randomNumber = Math.floor(Math.random()*questionSet.length);
       randomQuestion = questionSet[randomNumber]; //getQuestion
@@ -137,41 +139,5 @@ function checkAnswer(answer) {
       btnProvideQuestion() 
   }	  
 }
-function countBattles() {
-  if (totalScore == 3) {
-    numBattles++;
-  } else if (totalScore == 6) {
-    numBattles++;
-    
-  } else if (totalScore == 9){
-    numBattles++;
-  } 
-  battlesPlayed.innerHTML = `Batallas jugadas: ${numBattles}`;
-}
-console.log(numBattles);
-console.log(battlesWon);
 
-function battlesWontotal() {
-  if ((totalScore == 3) && (currentScore >= 2)) {
-    battlesWon++;
-  } else if ((totalScore == 6) && (currentScore >= 4)) {
-    battlesWon++;
-    twoBattlesWon.innerHTML = `Wow! Enhorabuena! Has ganado ya 2 batallas y por tanto la guerra! Si te apetece ve a por el tercero!`;
-  } else if ((totalScore == 9) && (currentScore >= 6)) {
-    battlesWon++;
-  }
-  batllesWon.innerHTML = `${battlesWon} batallas ganadas de ${numBattles} jugadas`;
-};
 
-function changeScreen() {
-    if (totalScore == 3) {
-      setMapScreen();
-    } else if (totalScore == 6) {
-      setMapScreen();
-    } else if (totalScore == 9) {
-     if(battlesWon >= 2) {
-        setWinScreen();
-      } else {
-      setGameOver();
-    }
-  }}

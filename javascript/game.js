@@ -9,7 +9,7 @@ let id2 = document.getElementById("id2");
 let id3 = document.getElementById("id3");
 let battle = document.getElementById("battle");
 let winScreen = document.getElementById("win-Screen");
-let gameOver = document.getElementById("gameOver-screen");
+let gameOver = document.getElementById("GameOver-screen");
 let quizImg = document.getElementById("quiz");
 let answerA = document.getElementById("answerA");
 let answerB = document.getElementById("answerB");
@@ -70,7 +70,18 @@ function setGameOver() {
     gameOver.style.display = "block";
 }
 
-
+function changeScreen() {
+    if (totalScore == 3) {
+      setMapScreen();
+    } else if (totalScore == 6) {
+      setMapScreen();
+    } else if (totalScore == 9) {
+     if(battlesWon >= 2) {
+        setWinScreen();
+      } else {
+        setGameOver();
+    }
+  }}
 
 btnStart.addEventListener("click", function (){
     //estamos en splash screen y queremos pasar a Introduction Screen
