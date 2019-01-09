@@ -8,13 +8,9 @@ let id1 = document.getElementById("id1");
 let id2 = document.getElementById("id2");
 let id3 = document.getElementById("id3");
 let battle = document.getElementById("battle");
-// let battle2 = document.getElementById("battle2");
-// let battle3 = document.getElementById("battle3");
-
 let winScreen = document.getElementById("win-Screen");
 let gameOver = document.getElementById("gameOver-screen");
-let quiz = document.getElementById("quiz");
-
+let quizImg = document.getElementById("quiz");
 let answerA = document.getElementById("answerA");
 let answerB = document.getElementById("answerB");
 let answerC = document.getElementById("answerC");
@@ -28,11 +24,12 @@ function setIntroductionScreen() {
 }
 function setMapScreen() {
     introductionScreen.style.display = "none";
+    battle.style = "none";
     mapScreen.style.display = "flex";
 }
 
 function setQuiz () {
-    quiz.style.display = "block";
+    quizImg.style.display = "block";
 }
 
 function setBattle1 () {
@@ -40,29 +37,28 @@ function setBattle1 () {
     battle.style.display = "block";
     enemy1.style.display = "block";
         setQuiz();
-        Quiz();
+        btnProvideQuestion();      
         
 
 }
 function setBattle2 () {
     mapScreen.style.display = "none"; 
     battle.style.display = "block";
+    enemy1.style.display = "none";
     enemy2.style.display = "block";
-    setTimeout(function () {
         setQuiz();
-        Quiz();
+        btnProvideQuestion();
         
-    },5000);
+  
 }
 function setBattle3 () {
     mapScreen.style.display = "none"; 
     battle.style.display = "block";
+    enemy2.style.display = "none";
     enemy3.style.display = "block";
-    setTimeout(function () {
         setQuiz();
-        Quiz();
+        btnProvideQuestion();
         
-    },5000);
 }
 function setWinScreen() {
     battle.style.display = "none";
@@ -74,24 +70,7 @@ function setGameOver() {
     gameOver.style.display = "block";
 }
 
-function changeScreen() {
-    if (totalScore === 3) {
-      setTimeout(function(){ 
-        setMapScreen();
-       }, 3000);
-    } else if (totalScore === 6) {
-      setTimeout(function(){ 
-        setMapScreen();
-       }, 3000);
-    } else if (totalScore === 9) {
-      setTimeout(function(){ 
-        if(currentScore >= 4) {
-          setWinScreen();
-        } else {
-        setGameOver();
-      }
-    }, 3000);
-    }}
+
 
 btnStart.addEventListener("click", function (){
     //estamos en splash screen y queremos pasar a Introduction Screen

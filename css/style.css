@@ -42,7 +42,7 @@ p {
     height: 800px;
     display: none;
     align-items: center;
-    display: flex;
+    display: "none";
     justify-content: center;
     flex-direction: column;
 }
@@ -67,6 +67,7 @@ p {
 
 .Battle {
     display: none;
+    background-color: antiquewhite;
 }
 
 .winScreen {
@@ -158,13 +159,16 @@ button:active {
     }
 
     .Enemy1 {
+        background-color: beige;
         display: none;
     }
     
     .Enemy2 {
+        background-color: blanchedalmond;
         display: none;
     }
     
     .Enemy3 {
+        background-color: azure;
         display: none;
     }
