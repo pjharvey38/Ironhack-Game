@@ -1,7 +1,4 @@
-
-
-  
-  var quiz = [];
+var quiz = [];
 quiz[0] = new Question("What is 1/4 of 100?", "25", "24", "23");
 quiz[1] = new Question("What color is blood?", "Red", "White", "Green");
 quiz[2] = new Question("What color is grass?", "Green", "White", "Red");
@@ -19,7 +16,7 @@ quiz[13] = new Question("What was Picasso?", "Artist", "Baker", "Jobless");
 quiz[14] = new Question("Si volvieras solo a casa por la noche y te encontraras con una mujer y notaras su miedo al sentirte, qué harías?", "Cambiar de acera y adelantarme para que me vea y así vaya más tranquila viendo que no le voy a hacer nada", "Decirle que tranquila, que no le voy a hacer nada", "Decirle guapa para que vea que la aprecio.");
 quiz[15] = new Question("El ocho de marzo se celebra el día de la mujer trabajadora, sabes porqué se celebra ese día?", "ni idea, ni me importa ni creo que sea importante", "Porque ese día las mujeres de todo el mundo salieron a la calle por primera vez", "porque así lo decidió la Conferencia Internacional de Mujeres en 1910 a propuesta de Clara Zetkin, una activista alemana por los derechos de la mujer.");
 quiz[16] = new Question("Cuando silbas a una chica por la calle, lo haces por...", "demostrar ante el resto de hombres lo hombre que soy", "porque soy un romántico empedernido y sé que a las mujeres les encanta", "un buen cumplido no le sienta mal a nadie, no?");
-quiz[17] = new Question("Todas las mujeres son unas brujas", "Para nada, si se pelean entre ellas es para ejercer algún tipo de poder en la sombra, es a lo que las ha acostumbrado el sistema patriarcal en el que hemos crecido", "por supuesto, todas las mujeres son unas brujas, solo se critican entre ellas y quieren casarse a la primera de cambio", "para bruja tu madre!");
+quiz[17] = new Question("Todas las mujeres son unas brujas!", "Para nada, si se pelean entre ellas es para ejercer algún tipo de poder en la sombra, es a lo que las ha acostumbrado el sistema patriarcal en el que hemos crecido", "por supuesto, todas las mujeres son unas brujas, solo se critican entre ellas y quieren casarse a la primera de cambio", "para bruja tu madre!");
 
 
 var randomQuestion;

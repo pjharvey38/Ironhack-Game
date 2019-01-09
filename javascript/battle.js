@@ -2,9 +2,11 @@ var battlesPlayed = document.getElementById("battles-played");
 var batllesWon = document.getElementById("battles-won");
 var twoBattlesWon = document.getElementById("2-battlesWon");
 
+
 function countBattles() {
     if (totalScore == 3) {
       numBattles++;
+      
     } else if (totalScore == 6) {
       numBattles++;
       
@@ -28,4 +30,6 @@ function countBattles() {
     batllesWon.innerHTML = `${battlesWon} batallas ganadas de ${numBattles} jugadas`;
   };
 
-  
+function loadDialogues() {
+
+}

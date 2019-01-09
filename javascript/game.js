@@ -17,6 +17,9 @@ let answerC = document.getElementById("answerC");
 let enemy1 = document.getElementById("enemy1");
 let enemy2 = document.getElementById("enemy2");
 let enemy3 = document.getElementById("enemy3");
+let girlKatana = document.getElementById("katana-girl");
+let girlKatana2 = document.getElementById("katana-girl2");
+let girlKatana3 = document.getElementById("katana-girl3");
 
 function setIntroductionScreen() {
     splashScreen.style.display= "none";
@@ -35,9 +38,16 @@ function setQuiz () {
 function setBattle1 () {
     mapScreen.style.display = "none"; 
     battle.style.display = "block";
+    enemy2.style.display = "none";
+    enemy3.style.display = "none";
     enemy1.style.display = "block";
+    
+        setTimeout(function() {
+        enemy1.style.height = "550px"
+        girlKatana.style.top = "170px";
         setQuiz();
-        btnProvideQuestion();      
+        btnProvideQuestion(); 
+        }, 5000);     
         
 
 }
@@ -45,19 +55,31 @@ function setBattle2 () {
     mapScreen.style.display = "none"; 
     battle.style.display = "block";
     enemy1.style.display = "none";
+    enemy3.style.display = "none";
     enemy2.style.display = "block";
+        
+    setTimeout(function() {
+        enemy2.style.height = "550px";
+        girlKatana2.style.top = "180px";
         setQuiz();
-        btnProvideQuestion();
+        btnProvideQuestion(); 
+        }, 5000);  
         
   
 }
 function setBattle3 () {
     mapScreen.style.display = "none"; 
     battle.style.display = "block";
+    enemy1.style.display = "none";
     enemy2.style.display = "none";
     enemy3.style.display = "block";
+        
+    setTimeout(function() {
+        enemy3.style.height = "550px";
+        girlKatana3.style.top = "180px";
         setQuiz();
-        btnProvideQuestion();
+        btnProvideQuestion(); 
+        }, 5000);  
         
 }
 function setWinScreen() {
