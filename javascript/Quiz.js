@@ -1,6 +1,6 @@
-var quiz = [];
-quiz[0] = new Question("What is 1/4 of 100?", "25", "24", "23");
-quiz[1] = new Question("What color is blood?", "Red", "White", "Green");
+var quiz = [];2
+quiz[0] = new Question("Si una mujer se queda embarazada de un hijo no deseado, qué debe hacer?", "Si no quiere tenerlo, debe tener la libertad para decidir sobre su cuerpo.", "Pues que se aguante, que se hubiera cortado a tiempo, a lo hecho pecho!", "El aborto es un asesinato en toda regla de una vida humana, si no quiere tenerlo que lo de en adopción!");
+quiz[1] = new Question("A los amigos que van emborrachando a chicas por los bares para poder aprovecharse de ellas, qué les diríais?", "Si está borracha, no es es sexo consentido, no es no y si no dice que sí, también es no!", "Bien hecho! Las tías no saben lo que quieren y hace falta un poco de ayuda para que se suelten.", "A ver, es que últimamente todo parece acoso, ella es mayorcita y sabe lo que se hace cuando se bebe las copas que se bebe.");
 quiz[2] = new Question("What color is grass?", "Green", "White", "Red");
 quiz[3] = new Question("How many legs does a spider have?", "8", "6", "4");
 quiz[4] = new Question("Who is the king of the Netherlands?", "Willem-Alexander", "Willem-Alexzelf", "Willem-Alexniemand");
@@ -17,7 +17,7 @@ quiz[14] = new Question("Si volvieras solo a casa por la noche y te encontraras 
 quiz[15] = new Question("El ocho de marzo se celebra el día de la mujer trabajadora, sabes porqué se celebra ese día?", "ni idea, ni me importa ni creo que sea importante", "Porque ese día las mujeres de todo el mundo salieron a la calle por primera vez", "porque así lo decidió la Conferencia Internacional de Mujeres en 1910 a propuesta de Clara Zetkin, una activista alemana por los derechos de la mujer.");
 quiz[16] = new Question("Cuando silbas a una chica por la calle, lo haces por...", "demostrar ante el resto de hombres lo hombre que soy", "porque soy un romántico empedernido y sé que a las mujeres les encanta", "un buen cumplido no le sienta mal a nadie, no?");
 quiz[17] = new Question("Todas las mujeres son unas brujas!", "Para nada, si se pelean entre ellas es para ejercer algún tipo de poder en la sombra, es a lo que las ha acostumbrado el sistema patriarcal en el que hemos crecido", "por supuesto, todas las mujeres son unas brujas, solo se critican entre ellas y quieren casarse a la primera de cambio", "para bruja tu madre!");
-
+quiz[18] = new Question("Cuándo ves que han violado a una chica joven que iba de fiesta, qué opinas?", "Hace bien, todos tenemos derecho a salir de fiesta sin que nos molesten.", "Pues según como vaya vestida, pensaré que tenga cuidado, una chica no debe ir de cualquier manera y menos borracha, que parece que va pidiendo otras cosas", "Va pidiendo a gritos marcha, eso está claro!");
 
 var randomQuestion;
 var answers = [];
@@ -27,7 +27,7 @@ var numBattles = 0;
 var battlesWon = 0;
 var score = document.getElementById("score");
 
-
+console.log(quiz);
 
 document.addEventListener("DOMContentLoaded", function(event) { 
   btnProvideQuestion();
@@ -66,8 +66,9 @@ function getRandomQuestionSet(number){
 
 
 function btnProvideQuestion() { 
+  
   var questionSet = getRandomQuestionSet(3);
-console.log(questionSet)
+  console.log(questionSet)
 
     var randomNumber = Math.floor(Math.random()*questionSet.length);
       randomQuestion = questionSet[randomNumber]; //getQuestion

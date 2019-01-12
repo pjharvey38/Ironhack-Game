@@ -20,6 +20,15 @@ let enemy3 = document.getElementById("enemy3");
 let girlKatana = document.getElementById("katana-girl");
 let girlKatana2 = document.getElementById("katana-girl2");
 let girlKatana3 = document.getElementById("katana-girl3");
+let enemy1Img = document.getElementById("enemy1-png");
+let enemy2Img = document.getElementById("enemy2-png");
+let enemy3Img = document.getElementById("enemy3-png");
+let btnenemy1 = document.getElementsByClassName("start-splash")[2];
+let btnenemy2 = document.getElementsByClassName("start-splash")[3];
+let btnenemy3 = document.getElementsByClassName("start-splash")[4];
+
+console.log(btnenemy1);
+
 
 function setIntroductionScreen() {
     splashScreen.style.display= "none";
@@ -41,13 +50,16 @@ function setBattle1 () {
     enemy2.style.display = "none";
     enemy3.style.display = "none";
     enemy1.style.display = "block";
+    btnenemy1.style.backgroundColor = "red";
+    loadDialogues(0, 0);
     
         setTimeout(function() {
         enemy1.style.height = "550px"
-        girlKatana.style.top = "170px";
+        girlKatana.style.top = "160px";
+        enemy1Img.style.top = "160px";
         setQuiz();
         btnProvideQuestion(); 
-        }, 5000);     
+        }, 21000);     
         
 
 }
@@ -57,13 +69,16 @@ function setBattle2 () {
     enemy1.style.display = "none";
     enemy3.style.display = "none";
     enemy2.style.display = "block";
+    btnenemy2.style.backgroundColor = "red";
+    loadDialogues(1, 1);
         
     setTimeout(function() {
         enemy2.style.height = "550px";
         girlKatana2.style.top = "180px";
+        enemy2Img.style.top = "180px";
         setQuiz();
         btnProvideQuestion(); 
-        }, 5000);  
+        }, 21000);  
         
   
 }
@@ -73,13 +88,15 @@ function setBattle3 () {
     enemy1.style.display = "none";
     enemy2.style.display = "none";
     enemy3.style.display = "block";
-        
+    btnenemy3.style.backgroundColor = "red";
+     loadDialogues(2, 2);   
     setTimeout(function() {
         enemy3.style.height = "550px";
         girlKatana3.style.top = "180px";
+        enemy3Img.style.top = "180px";
         setQuiz();
         btnProvideQuestion(); 
-        }, 5000);  
+        }, 21000);  
         
 }
 function setWinScreen() {
@@ -121,6 +138,7 @@ id1.addEventListener("click", function() {
 })
 
 id2.addEventListener("click", function() {
+    
     //estamos en introduction screen y queremos pasar al mapa
     setBattle2();
 })

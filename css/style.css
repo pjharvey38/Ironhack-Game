@@ -162,6 +162,7 @@ button:active {
         background-size: 100% 100%;
         height: 800px;
         display: none;
+        
     }
     
     .Enemy2 {
@@ -183,7 +184,7 @@ button:active {
     .katana-sprite {
         height: 256px;
         position: relative;
-        right: 100px;
+        left: 400px;
         top: 400px;
     }
 
@@ -192,4 +193,46 @@ button:active {
         height: 256px;
         top: 450px;
         left: 400px;
+    }
+    .enemy1-PNG {
+        height: 200px;
+        width: 130px;
+        position: relative;
+        left: 500px;
+        top: 400px;
+    }
+
+    .enemy2-PNG {
+        height: 200px;
+        width: 130px;
+        position: relative;
+        left: 600px;
+        top: 450px;
+    }
+    .num-battles {
+        color: white;
+        align-self: center;
+        
+    }
+    .Dialogue1{
+        position: absolute;
+        color: black;
+        left: 30px;
+        width: 400px; 
+        background-color: white;
+        border: 1px solid black;
+        padding: 10px;
+        display: none;
+
+    }
+
+    .DialogueEnemy1 {
+        position: absolute;
+        color: black;
+        right: 40px;
+        width: 400px; 
+        background-color: white;
+        border: 1px solid black; 
+        padding: 10px;
+        display: none;
     }
