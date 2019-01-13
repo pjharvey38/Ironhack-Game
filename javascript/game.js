@@ -23,12 +23,13 @@ let girlKatana3 = document.getElementById("katana-girl3");
 let enemy1Img = document.getElementById("enemy1-png");
 let enemy2Img = document.getElementById("enemy2-png");
 let enemy3Img = document.getElementById("enemy3-png");
-let btnenemy1 = document.getElementsByClassName("start-splash")[2];
-let btnenemy2 = document.getElementsByClassName("start-splash")[3];
-let btnenemy3 = document.getElementsByClassName("start-splash")[4];
-
-console.log(btnenemy1);
-
+let btnenemy = document.getElementsByClassName("btnEnemy");
+// let btnenemy2 = document.getElementsByClassName("start-splash")[3];
+// let btnenemy3 = document.getElementsByClassName("start-splash")[4];
+let gameEnemy = document.getElementsByClassName("gameEnemy");
+let katanaGirl = document.getElementsByClassName("katanaGirl");
+let enemyImage = document.getElementsByClassName("enemyImg");
+console.log(gameEnemy);
 
 function setIntroductionScreen() {
     splashScreen.style.display= "none";
@@ -41,72 +42,93 @@ function setMapScreen() {
 }
 
 function setQuiz () {
-    quizImg.style.display = "block";
+    setScreenBlock(quizImg);
 }
 
-function setBattle1 () {
-    mapScreen.style.display = "none"; 
-    battle.style.display = "block";
-    enemy2.style.display = "none";
-    enemy3.style.display = "none";
-    enemy1.style.display = "block";
-    btnenemy1.style.backgroundColor = "red";
-    loadDialogues(0, 0);
+// function setBattle1 () {
+//     mapScreen.style.display = "none"; 
+//     battle.style.display = "block";
+//     enemy2.style.display = "none";
+//     enemy3.style.display = "none";
+//     enemy1.style.display = "block";
+//     btnenemy1.style.backgroundColor = "red";
+//     loadDialogues(0, 0);
     
-        setTimeout(function() {
-        enemy1.style.height = "550px"
-        girlKatana.style.top = "160px";
-        enemy1Img.style.top = "160px";
-        setQuiz();
-        btnProvideQuestion(); 
-        }, 21000);     
+//         setTimeout(function() {
+//         enemy1.style.height = "550px"
+//         girlKatana.style.top = "160px";
+//         enemy1Img.style.top = "160px";
+//         setQuiz();
+//         btnProvideQuestion(); 
+//         }, 21000);     
         
 
-}
-function setBattle2 () {
-    mapScreen.style.display = "none"; 
-    battle.style.display = "block";
-    enemy1.style.display = "none";
-    enemy3.style.display = "none";
-    enemy2.style.display = "block";
-    btnenemy2.style.backgroundColor = "red";
-    loadDialogues(1, 1);
+// }
+
+function setBattle (battleOK, battleNone1, battleNone2) {
+    screenNone(mapScreen); 
+    setScreenBlock(battle);
+    screenNone(gameEnemy[battleNone2]);
+    screenNone(gameEnemy[battleNone1]);
+    setScreenBlock(gameEnemy[battleOK]);
+    btnenemy[battleOK].style.backgroundColor = "red";
+ 
         
     setTimeout(function() {
-        enemy2.style.height = "550px";
-        girlKatana2.style.top = "180px";
-        enemy2Img.style.top = "180px";
+        gameEnemy[battleOK].style.height = "550px";
+        katanaGirl[battleOK].style.top = "180px";
+        enemyImage[battleOK].style.top = "180px";
         setQuiz();
         btnProvideQuestion(); 
         }, 21000);  
         
   
 }
-function setBattle3 () {
-    mapScreen.style.display = "none"; 
-    battle.style.display = "block";
-    enemy1.style.display = "none";
-    enemy2.style.display = "none";
-    enemy3.style.display = "block";
-    btnenemy3.style.backgroundColor = "red";
-     loadDialogues(2, 2);   
-    setTimeout(function() {
-        enemy3.style.height = "550px";
-        girlKatana3.style.top = "180px";
-        enemy3Img.style.top = "180px";
-        setQuiz();
-        btnProvideQuestion(); 
-        }, 21000);  
+
+// function setBattle2 () {
+//     mapScreen.style.display = "none"; 
+//     battle.style.display = "block";
+//     enemy1.style.display = "none";
+//     enemy3.style.display = "none";
+//     enemy2.style.display = "block";
+//     btnenemy2.style.backgroundColor = "red";
+//     loadDialogues(1, 1);
         
-}
+//     setTimeout(function() {
+//         enemy2.style.height = "550px";
+//         girlKatana2.style.top = "180px";
+//         enemy2Img.style.top = "180px";
+//         setQuiz();
+//         btnProvideQuestion(); 
+//         }, 21000);  
+        
+  
+// }
+// function setBattle3 () {
+//     mapScreen.style.display = "none"; 
+//     battle.style.display = "block";
+//     enemy1.style.display = "none";
+//     enemy2.style.display = "none";
+//     enemy3.style.display = "block";
+//     btnenemy3.style.backgroundColor = "red";
+//      loadDialogues(2, 2);   
+//     setTimeout(function() {
+//         enemy3.style.height = "550px";
+//         girlKatana3.style.top = "180px";
+//         enemy3Img.style.top = "180px";
+//         setQuiz();
+//         btnProvideQuestion(); 
+//         }, 21000);  
+        
+// }
 function setWinScreen() {
-    battle.style.display = "none";
-    winScreen.style.display = "block";
+    screenNone(battle);
+    setScreenBlock(winScreen);
 }
 
 function setGameOver() {
-    battle.style.display = "none";
-    gameOver.style.display = "block";
+    screenNone(battle);
+    setScreenBlock(gameOver);
 }
 
 function changeScreen() {
@@ -134,18 +156,22 @@ btnIntroduction.addEventListener("click", function() {
 
 id1.addEventListener("click", function() {
     //estamos en introduction screen y queremos pasar al mapa
-    setBattle1();
+    setBattle(0, 1, 2);
+    loadDialogues(0, 0)
+
 })
 
 id2.addEventListener("click", function() {
     
     //estamos en introduction screen y queremos pasar al mapa
-    setBattle2();
+    setBattle(1, 0, 2);
+    loadDialogues(1, 1)
 })
 
 id3.addEventListener("click", function() {
     //estamos en introduction screen y queremos pasar al mapa
-    setBattle3();
+    setBattle(2, 0, 1);
+    loadDialogues(2, 2);
 })
 
 // answerA.addEventListener("click", function (){

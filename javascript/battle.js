@@ -41,9 +41,9 @@ function countBattles() {
 };
 
  var dialogue = [];
- dialogue[0] = new Dialogue(`Vaya, vaya, veo que tenemos a un machirulo algo hispter por aquí! No sé si fiarme mucho de estos... Van de modernos pero luego a la que hablas con ellos, no paran de hacerte mansplanning...Qué tienes que contarme?`, `Pero qué dices mujer? Para nada soy machista, pero desde luego sí que creo en la igualdad, al contrario que algunas feminazis que andan sueltas que parecen que solo odian a los hombres`, `¿Eso crees? ¡Muy bien! Comencemos la batalla!`)
- dialogue[1] = new Dialogue(`Bueno, creo que sé de qué vas! Típico votante de Vox, esperas salvar a las mujeres a lomos de tu caballo?`, `Eso te gustaría a ti, feminazi de pacotilla, solo las mujeres de verdad que honran a su hombre se merecen el respeto y cuidado que le comulgaría`, `Con que esas tenemos, no? Creo que te mereces descubrir un par de situaciones, a ver si cambias de opinión. Que comience la batalla!`)
- dialogue[2] = new Dialogue(`Así que aquí tenemos a un estereotipo de mujer machista. No sé quién es peor... A ver qué es lo que opinas del feminismo y de sus derechos?`, `Quer hartas me tenéis las machorras de las feministas. Sois unas pesaditas. A ver cuándo os ponéis guapas y nos dejais al resto de mujeres en paz, que yo lo que quiero es que  me abran la puerta y me cuiden, como toda la vida`, `Esto es peor de lo que me imaginaba! Por la gran Madonna! A ver si vamos aprendiendo que las feministas no son tus enemigas, el patriarcado es tu enemigo. En fin, que comience la batalla!`);
+ dialogue[0] = new Dialogue(`Vaya, vaya, ¡veo que tenemos a un machirulo algo hipster por aquí! No sé si fiarme mucho de estos... Van de modernos pero luego a la que hablas con ellos, no paran de hacerte mansplanning...¿Qué tienes que contarme?`, `¿Pero qué dices mujer? Para nada soy machista, pero desde luego sí que creo en la igualdad, al contrario que algunas feminazis que andan sueltas por ahí que parecen que solo odian a los hombres...`, `¿Eso crees? ¡Muy bien! ¡Demuéstrame lo feminista que eres! ¡Comencemos la batalla!`)
+ dialogue[1] = new Dialogue(`Bueno, ¡creo que sé de qué vas! Típico votante de Vox, ¿esperas salvar a las mujeres a lomos de tu caballo?`, `Eso te gustaría a ti, feminazi de pacotilla, solo las mujeres decentes de verdad se merecen el respeto y cuidado que necesitan de un hombre.`, `Con que esas tenemos, ¿no? Si crees que sabes tanto lo que necesitamos las mujeres, atrévete a desmostrarlo. ¡Que comience la batalla!`)
+ dialogue[2] = new Dialogue(`Así que aquí tenemos a la típica mujer machista. No sé quién es peor... A ver, ¿qué es lo que opinas del feminismo?`, `Que hartas me tenéis las machorras de las feministas. Sois unas pesaditas. A ver cuándo os ponéis guapas y nos dejais al resto de mujeres en paz, que yo lo que quiero es que me abran la puerta y me cuiden, ¡como toda la vida!`, `¡Esto es peor de lo que me imaginaba! ¡Por la gran Madonna! A ver si vamos aprendiendo que las feministas no son tus enemigas, ¡el patriarcado es tu enemigo! En fin, ¡que comience la batalla!`);
 
  function setScreenBlock(x) {
    return x.style.display = "block"
@@ -71,8 +71,8 @@ function loadDialogues(num, index) {
     screenNone(dialogueEnemy[index]);
     setScreenBlock(dialogues[index]);
     dialogues[index].innerHTML = `${dialogue[num].reply1}`;
-  },13000);
+  },15000);
   setTimeout(function () {
     screenNone(dialogues[index]);
-  },18000);
+  },20000);
 }
