@@ -1,15 +1,30 @@
 *{
 	font-family: Marat Sans;
 }
+html, body {
+    height: 100%;
+    margin: 0;
+  }
 
 h1 {
         font-family: Marat Sans;
         font-size: 38px;
         font-weight: 800;
         line-height: 36.96px;
-        letter-spacing: normal; 
+        letter-spacing: 2px; 
+
+        text-align: center;   
+}
+
+h2 {
+    font-family: Marat Sans;
+        font-size: 22px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: 1px; 
        
         text-align: center;   
+
 }
 
 p {
@@ -29,7 +44,7 @@ p {
     background-color: lightseagreen;
     border: 1px solid lightseagreen;
     width: 100%;
-    height: 800px;
+    height: 100%;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -39,7 +54,7 @@ p {
     background-color: lightskyblue;
     border: 1px solid lightskyblue;
     width: 100%;
-    height: 800px;
+    height: 100%;
     display: none;
     align-items: center;
     display: "none";
@@ -55,7 +70,7 @@ p {
     background-color: aqua;
     border: 1px solid black;
     width: 100%;
-    height: 800px;
+    height: 100%;
     display: none;
     align-items: center;
     
@@ -67,7 +82,8 @@ p {
 
 .Battle {
     display: none;
-    background-color: lightsteelblue;
+    background: lightblue;
+    height: 100%;
     
 }
 
@@ -80,26 +96,42 @@ p {
 }
 
 .flex { 
-    display:flex;}
+    display:flex;
+}
 
 .field {
   min-width: 200px;
   min-height: 30px;
-  margin: 10px;
+  margin: 10px 20px;
+  font-size: 20px;
+  color: #1d4d6f;
+  
+  font-weight: 500;
 }
 
 .button-field {
-  height: 40px;
-  width: 500px;
-  outline: none;
-  background: white;
-  border: black solid 1px;
-  font-size: 15px;
+  height: 50px;
+  width: 100%;
+  font-size: 20px;  
+  background: #1d4d6f;
+  text-align: left;
+  color: white;
+  font-weight: 300;
+  padding: 20px 20px 30px 20px;
+  
+  
 }
 
 button:active {
   background: blue;
+  color: white;
 }
+
+.button-field:hover {
+    background-color: #1d4d6f; /* Green */
+    color: #ffbf00;
+  }
+
 .Quiz1 {
     display: none;
 }
@@ -116,6 +148,7 @@ button:active {
     font: italic;
     font-size: 50px;
     align-items:  center;
+    letter-spacing: 3px;
 }
 .game-body {
     font-family: Marat Sans;
@@ -135,7 +168,7 @@ button:active {
         background-color:lightgoldenrodyellow;
         border-radius: 5px;
         padding: 20px 20px;
-        font-size: 15px;
+        font-size: 20px;
         color: black;
         font-weight: 400;
         line-height: 1.5;
@@ -143,9 +176,29 @@ button:active {
         font-size: 0.8rem;
         letter-spacing: 1px;
         margin: 10px 0;
-        border: 1px solid lightslategray;      
+            
     
     }
+
+    .btnEnemy {
+        height: 100px;
+        width: 100px;
+        background-color:lightgoldenrodyellow;
+        border-radius: 50%;
+        padding: 20px 20px;
+        font-size: 20px;
+        color: black;
+        font-weight: 400;
+        line-height: 1.5;
+        letter-spacing: normal;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        margin: 10px 0;
+           
+    
+    }
+
+
 
     .katana-img {
     
@@ -160,7 +213,7 @@ button:active {
         background-image: url("../img/fondo_550.png");
         width: 100%;
         background-size: 100% 100%;
-        height: 800px;
+        height: 100%;
         display: none;
         
     }
@@ -170,7 +223,7 @@ button:active {
         display: none;
         width: 100%;
         background-size: 100% 100%;
-        height: 800px;
+        height: 100%;
     }
     
     .Enemy3 {
@@ -178,61 +231,186 @@ button:active {
         display: none;
         width: 100%;
         background-size: 100% 100%;
-        height: 800px;
+        height: 100%;
     }
 
     .katana-sprite {
         height: 256px;
         position: relative;
-        left: 400px;
-        top: 400px;
+        left: 30%;
+        top: 550px;
     }
 
     .katana-sprite2 {
         position: relative;
         height: 256px;
-        top: 450px;
-        left: 400px;
+        top: 550px;
+        left: 30%;
     }
     .enemy1-PNG {
         height: 200px;
         width: 130px;
         position: relative;
-        left: 500px;
-        top: 400px;
+        left: 50%;
+        top: 550px;
     }
 
     .enemy2-PNG {
         height: 200px;
         width: 130px;
         position: relative;
-        left: 600px;
-        top: 450px;
+        left: 50%;
+        top: 550px;
     }
-    .num-battles {
+    .title-battle {
+       padding-top: 60px;
+       position: absolute;
+       left: 55%;
+    }
+    #battles-played {
         color: white;
-        align-self: center;
+        
+        position: absolute; 
+        left: 20%;
+        top: 20px,
         
     }
-    .Dialogue1{
+
+    #battles-won {
+        color: white;
+        
+        position: absolute; 
+        left: 20%;
+        top: 5º0px,
+        
+    }
+    /* .Dialogue1{
         position: absolute;
         color: black;
+        top: 250px;
         left: 30px;
-        width: 400px; 
+        width: 500px; 
         background-color: white;
         border: 1px solid black;
         padding: 10px;
         display: none;
 
+    } */
+
+    /* .DialogueEnemy1 {
+        position: absolute;
+        color: black;
+        top: 250px;
+        right: 40px;
+        width: 500px; 
+        background-color: white;
+        border: 1px solid black;
+        padding: 10px;
+        display: none;
+    } */
+
+    .Dialogue1 {
+        position: absolute;
+        background: #f1f1f1;
+        border-radius: .4em;
+        top: 250px;
+        width: 30%;
+        padding: 10px;
+        left: 10%;
+        display: none;
+    }
+    
+    .Dialogue1:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        
+        left: 10%;
+        width: 0;
+        height: 0;
+        border: 20px solid transparent;
+        border-top-color: #f1f1f1;
+        border-bottom: 0;
+        border-right: 0;
+        margin-left: -10px;
+        margin-bottom: -20px;
     }
 
     .DialogueEnemy1 {
         position: absolute;
-        color: black;
-        right: 40px;
-        width: 400px; 
-        background-color: white;
-        border: 1px solid black; 
+        background: #f1f1f1;
+        border-radius: .4em;
+        
+        top: 250px;
+        width: 30%;
         padding: 10px;
+        right: 10%;
         display: none;
+       
+    }
+    
+    .DialogueEnemy1:after {
+        content: '';
+        position: absolute;
+        bottom: 0; 
+        right: 10%;
+        width: 0;
+        height: 0;
+        border: 20px solid transparent;
+        border-top-color: #f1f1f1;
+        border-bottom: 0;
+        border-left: 0;
+        
+        margin-left: -10px;
+        margin-bottom: -20px;
+    }
+
+    .reply {
+        position: absolute;
+        background: #f1f1f1;
+        border-radius: .4em;
+        top: 200px;
+        width: 30%;
+        padding: 10px;
+        left: 10%;
+        display: none;
+    }
+    
+    .reply:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        
+        left: 10%;
+        width: 0;
+        height: 0;
+        border: 20px solid transparent;
+        border-top-color: #f1f1f1;
+        border-bottom: 0;
+        border-right: 0;
+        margin-left: -10px;
+        margin-bottom: -20px;
+    } 
+    #id1 {
+        position: absolute; 
+        top: 250px;
+        left: 30%;
+        background-image: url("../img/enemy1-avatar.png");
+        background-size: 80px;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    #id1:active {
+        background-color: #ffbf00;
+    }
+    #id2 {
+        position: absolute; 
+        top: 500px;
+        left: 19%;
+    }
+
+    #id3 {
+        position: absolute;
+        left: 55%;
     }

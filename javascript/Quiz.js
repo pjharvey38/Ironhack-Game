@@ -58,8 +58,7 @@ function getRandomQuestionSet(number){
           qSet.push(randomIndex)
         }
     }
-    
-    return quiz.filter(function(d,i){
+     return quiz.filter(function(d,i){
       return qSet.indexOf(i) > -1;
     })
     
@@ -67,16 +66,13 @@ function getRandomQuestionSet(number){
 
 
 function btnProvideQuestion() { 
-  
-  var questionSet = getRandomQuestionSet(3);
+   var questionSet = getRandomQuestionSet(3);
   console.log(questionSet)
-
-    var randomNumber = Math.floor(Math.random()*questionSet.length);
-      randomQuestion = questionSet[randomNumber]; //getQuestion
+   var randomNumber = Math.floor(Math.random()*quiz.length);
+      randomQuestion = quiz[randomNumber]; //getQuestion
         console.log(randomQuestion.question);
           answers = [randomQuestion.rightAnswer, randomQuestion.wrongAnswer1, randomQuestion.wrongAnswer2];
           shuffle(answers);
-  
      get("question").innerHTML= randomQuestion.question;
      get("answerA").value= answers[0];
      get("answerA").innerHTML= answers[0];
@@ -124,19 +120,32 @@ function adjustScore(isCorrect) {
   	}
   }
   console.log(totalScore);
-  score.innerHTML = currentScore;
+  
 }
 
-function checkAnswer(answer) {  
+
+
+function checkAnswer(answer) {   
+  
   if (answer == randomQuestion.rightAnswer) {
     adjustScore(true);
-    btnProvideQuestion();
-    score.innerHTML = `Well done! ${currentScore} out of ${totalScore} questions correct!`;
+    loadRepliesRight()
+    
+    setTimeout(function (){
+    
+      btnProvideQuestion();
+    }, 3000);
+    
+    
+
   } else { 
       adjustScore(false);
-      score.innerHTML = `What a pity! ${currentScore} out of ${totalScore} questions, but not enough to win the battle`;
-      btnProvideQuestion() 
+      loadRepliesWrong()
+      setTimeout(function (){
+        btnProvideQuestion();
+      }, 3000);
   }	  
 }
+
 
 

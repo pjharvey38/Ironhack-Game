@@ -43,6 +43,7 @@ function setMapScreen() {
 
 function setQuiz () {
     setScreenBlock(quizImg);
+    quizImg.style.height = "30%";
 }
 
 // function setBattle1 () {
@@ -71,13 +72,13 @@ function setBattle (battleOK, battleNone1, battleNone2) {
     screenNone(gameEnemy[battleNone2]);
     screenNone(gameEnemy[battleNone1]);
     setScreenBlock(gameEnemy[battleOK]);
-    btnenemy[battleOK].style.backgroundColor = "red";
+    btnenemy[battleOK].style.backgroundColor = "#f58637";
  
         
     setTimeout(function() {
-        gameEnemy[battleOK].style.height = "550px";
-        katanaGirl[battleOK].style.top = "180px";
-        enemyImage[battleOK].style.top = "180px";
+        gameEnemy[battleOK].style.height = "70%";
+        katanaGirl[battleOK].style.top = "300px";
+        enemyImage[battleOK].style.top = "300px";
         setQuiz();
         btnProvideQuestion(); 
         }, 21000);  
@@ -133,16 +134,24 @@ function setGameOver() {
 
 function changeScreen() {
     if (totalScore == 3) {
+        setTimeout(function() {
       setMapScreen();
+        }, 3000);
     } else if (totalScore == 6) {
-      setMapScreen();
+        setTimeout(function() {
+            setMapScreen();
+              }, 3000);
     } else if (totalScore == 9) {
      if(battlesWon >= 2) {
-        setWinScreen();
+         setTimeout(function() {
+            setWinScreen();
+         }, 3000)
+        
       } else {
-        setGameOver();
-    }
-  }}
+        setTimeout(function() {
+            setGameOver();
+    }, 3000);
+  }}}
 
 btnStart.addEventListener("click", function (){
     //estamos en splash screen y queremos pasar a Introduction Screen
@@ -157,7 +166,8 @@ btnIntroduction.addEventListener("click", function() {
 id1.addEventListener("click", function() {
     //estamos en introduction screen y queremos pasar al mapa
     setBattle(0, 1, 2);
-    loadDialogues(0, 0)
+    loadDialogues(0, 0);
+   
 
 })
 
@@ -165,13 +175,15 @@ id2.addEventListener("click", function() {
     
     //estamos en introduction screen y queremos pasar al mapa
     setBattle(1, 0, 2);
-    loadDialogues(1, 1)
+    loadDialogues(1, 1);
+ 
 })
 
 id3.addEventListener("click", function() {
     //estamos en introduction screen y queremos pasar al mapa
     setBattle(2, 0, 1);
     loadDialogues(2, 2);
+    
 })
 
 // answerA.addEventListener("click", function (){
