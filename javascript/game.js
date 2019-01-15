@@ -38,7 +38,7 @@ function setIntroductionScreen() {
 function setMapScreen() {
     introductionScreen.style.display = "none";
     battle.style = "none";
-    mapScreen.style.display = "flex";
+    mapScreen.style.display = "block";
 }
 
 function setQuiz () {
@@ -72,9 +72,7 @@ function setBattle (battleOK, battleNone1, battleNone2) {
     screenNone(gameEnemy[battleNone2]);
     screenNone(gameEnemy[battleNone1]);
     setScreenBlock(gameEnemy[battleOK]);
-    btnenemy[battleOK].style.backgroundColor = "#f58637";
- 
-        
+    btnenemy[battleOK].style.backgroundColor = "#f58637";    
     setTimeout(function() {
         gameEnemy[battleOK].style.height = "70%";
         katanaGirl[battleOK].style.top = "300px";

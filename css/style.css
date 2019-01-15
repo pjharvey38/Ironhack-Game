@@ -123,7 +123,7 @@ p {
 }
 
 button:active {
-  background: blue;
+  background: #ffbf00;
   color: white;
 }
 
@@ -265,12 +265,12 @@ button:active {
     .title-battle {
        padding-top: 60px;
        position: absolute;
-       left: 55%;
+       left: 50%;
     }
     #battles-played {
         color: white;
         
-        position: absolute; 
+        position: relative; 
         left: 20%;
         top: 20px,
         
@@ -278,36 +278,12 @@ button:active {
 
     #battles-won {
         color: white;
-        
-        position: absolute; 
+        position: relative; 
         left: 20%;
         top: 5º0px,
         
     }
-    /* .Dialogue1{
-        position: absolute;
-        color: black;
-        top: 250px;
-        left: 30px;
-        width: 500px; 
-        background-color: white;
-        border: 1px solid black;
-        padding: 10px;
-        display: none;
 
-    } */
-
-    /* .DialogueEnemy1 {
-        position: absolute;
-        color: black;
-        top: 250px;
-        right: 40px;
-        width: 500px; 
-        background-color: white;
-        border: 1px solid black;
-        padding: 10px;
-        display: none;
-    } */
 
     .Dialogue1 {
         position: absolute;
@@ -410,7 +386,15 @@ button:active {
         left: 19%;
     }
 
+    #id2:active {
+        background-color: #ffbf00;
+    }
+
     #id3 {
         position: absolute;
-        left: 55%;
+        right: 40%;
+        top: 500px;
+    }
+    #id3:active {
+        background-color: #ffbf00;
     }
