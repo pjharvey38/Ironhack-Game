@@ -384,6 +384,10 @@ button:active {
         position: absolute; 
         top: 500px;
         left: 19%;
+        background-image: url("../img/cop-head.png");
+        background-size: 80px;
+        background-repeat: no-repeat;
+        background-position: center center;
     }
 
     #id2:active {

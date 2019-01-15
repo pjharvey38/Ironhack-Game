@@ -1,5 +1,5 @@
-# Project's name
-Aún por definir.
+# Super Píkara
+
 
 ## Description
 La lucha de insultos de Monkey Island aplicada a la lucha feminista. Un personaje femenino se va encontrando con distintos machirulos y personajes machistas a los que tiene que ganar con argumentos de peso para el movimiento feminista. Gana cuando ha conseguido convertir al mayor número de oponentes.
@@ -82,7 +82,7 @@ https://trello.com/invite/b/ekD4fDcA/4e89292a86b38769b12801f14df27f60/juego-iron
 ### Git
 URls for the project repo and deploy
 https://github.com/pjharvey38/Ironhack-Game
-[Link Deploy](http://github.com)
+[https://pjharvey38.github.io/Ironhack-Game/](http://github.com)
 
 
 ### Slides
