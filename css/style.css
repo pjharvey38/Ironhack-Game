@@ -61,6 +61,13 @@ p {
     flex-flow: column nowrap;
     padding: 20px 0 0 0; 
 }
+.num-battles {
+    left: 20%;
+    color: white;
+    position: relative; 
+    font-size: 20px;
+    top: 20px;
+}
 .intro-box {
     
     display: flex;
@@ -111,10 +118,25 @@ p {
 
 .winScreen {
     display: none;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .gaveOverScreen {
     display: none;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.gameOver {
+margin: 0 auto; 
 }
 
 .flex { 
@@ -265,7 +287,7 @@ button:active {
     .katana-sprite2 {
         position: relative;
         height: 256px;
-        top: 550px;
+        top: 560px;
         left: 30%;
     }
     .enemy1-PNG {
@@ -286,27 +308,9 @@ button:active {
     .title-battle {
        padding-top: 60px;
        position: absolute;
-       left: 50%;
+       left: 35%;
     }
-    #battles-played {
-        color: white;
-        position: relative; 
-        right: 10%;
-        top: 20px,
-        
-    }
-
-    #battles-won {
-        color: white;
-        position: relative; 
-        right: 10%;
-        top: 20px;
-        
-    }
-	.2-battlesWon {
-		position: relative; 
-		color: white;
-	}
+    
 
     .Dialogue1 {
         position: absolute;
@@ -515,3 +519,15 @@ button:active {
   
     align-self: center;
 }
+
+.ml15 {
+    font-weight: 800;
+    font-size: 3.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+  }
+  
+  .ml15 .word {
+    display: inline-block;
+    line-height: 1em;
+  }
