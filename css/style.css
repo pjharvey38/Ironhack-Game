@@ -47,22 +47,44 @@ p {
     height: 100%;
     align-items: center;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    flex-direction: column; 
+    justify-content: space-around;
 }
 .introductionScreen {
-    background-color: lightskyblue;
+    background-color: rgb(42, 100, 136);
     border: 1px solid lightskyblue;
     width: 100%;
     height: 100%;
     display: none;
     align-items: center;
     display: "none";
-    justify-content: center;
-    flex-direction: column;
+    flex-flow: column nowrap;
+    padding: 20px 0 0 0; 
+}
+.intro-box {
+    
+    display: flex;
+    flex-direction: row-reverse;
+    width: 50%;
+    padding: 20px;
+}
+.introduction-katana {
+    width: 256px;
+    align-content: center;
+}
+.text-intro {
+    align-self: center;
+    
+}
+.textIntro {
+    font-size: 20px;
+    color: white;
 }
 
-
+.intro-img {
+    align-self: flex-start;
+  
+}
 .mapScreen {
     background-image: url("../img/game-map.jpg");
     background-size: cover;
@@ -137,22 +159,23 @@ button:active {
 }
 
 .main-title {
-    
     width: 50%;
-    float: left;
+    
+   
 }
 
 .title {
     font-family: Salty1;
     color: red;
     font: italic;
-    font-size: 50px;
+    font-size: 60px;
     align-items:  center;
     letter-spacing: 3px;
 }
 .game-body {
     font-family: Marat Sans;
     color: lightblue;
+    font-size: 24px;
 
 }
 
@@ -202,11 +225,9 @@ button:active {
 
     .katana-img {
     
-    height: 150px;
-	width: 150px;
+    height: 350px;
+    width: auto;
     display: inline-block;
-
-    
     }
 
     .Enemy1 {
@@ -269,9 +290,8 @@ button:active {
     }
     #battles-played {
         color: white;
-        
         position: relative; 
-        left: 20%;
+        right: 10%;
         top: 20px,
         
     }
@@ -279,11 +299,14 @@ button:active {
     #battles-won {
         color: white;
         position: relative; 
-        left: 20%;
-        top: 5º0px,
+        right: 10%;
+        top: 20px;
         
     }
-
+	.2-battlesWon {
+		position: relative; 
+		color: white;
+	}
 
     .Dialogue1 {
         position: absolute;
@@ -380,10 +403,14 @@ button:active {
     #id1:active {
         background-color: #ffbf00;
     }
+
+    #id1:hover {
+        background-color: #ffbf00;
+    }
     #id2 {
         position: absolute; 
         top: 500px;
-        left: 19%;
+        left: 30%;
         background-image: url("../img/cop-head.png");
         background-size: 80px;
         background-repeat: no-repeat;
@@ -394,9 +421,12 @@ button:active {
         background-color: #ffbf00;
     }
 
+    #id2:hover {
+        background-color: #ffbf00;
+    }
     #id3 {
         position: absolute;
-        right: 40%;
+        right: 30%;
         top: 500px;
         background-image: url("../img/lydia-head.png");
         background-size: 80px;
@@ -406,3 +436,82 @@ button:active {
     #id3:active {
         background-color: #ffbf00;
     }
+
+    #id3:hover {
+        background-color: #ffbf00;
+    }
+
+    #hipster {
+        position: absolute;
+        background: #f1f1f1;
+        border-radius: .4em;
+        top: 50px;
+        width: 20%;
+        padding: 10px;
+        left: 5%;
+        background-color: rgba(255, 255, 255, 0.6);
+        box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+          
+           
+        }
+        
+        
+
+    .enemy-avatar {
+        display: none;
+        flex-direction: column;
+    
+    }
+
+    #votante-Vox {
+        position: absolute;
+        background: #f1f1f1;
+        border-radius: .4em;
+        top: 300px;
+        width: 20%;
+        padding: 10px;
+        left: 5%;
+        background-color: rgba(255, 255, 255, 0.6);
+        box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+      
+       
+    }
+    
+
+
+#maría-machista {
+    position: absolute;
+    background: #f1f1f1;
+    border-radius: .4em;
+    top: 200px;
+    width: 20%;
+    padding: 10px;
+    right: 5%;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  
+   
+}
+
+.vox-mapa {
+    width: 70px;
+  
+    align-self: center;
+}
+
+.vox-mapa {
+    width: 70px;
+  
+    align-self: center;
+}
+.hipster-mapa {
+    width: 80px;
+  
+    align-self: center;
+}
+
+.mari-map {
+    width: 80px;
+  
+    align-self: center;
+}

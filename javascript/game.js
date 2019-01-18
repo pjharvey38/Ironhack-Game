@@ -29,7 +29,7 @@ let btnenemy = document.getElementsByClassName("btnEnemy");
 let gameEnemy = document.getElementsByClassName("gameEnemy");
 let katanaGirl = document.getElementsByClassName("katanaGirl");
 let enemyImage = document.getElementsByClassName("enemyImg");
-console.log(gameEnemy);
+let enemyAvatar = document.getElementsByClassName("enemy-avatar");
 
 function setIntroductionScreen() {
     splashScreen.style.display= "none";
@@ -150,7 +150,13 @@ function changeScreen() {
             setGameOver();
     }, 3000);
   }}}
+function setEnemyID(idNum) {
+    enemyAvatar[idNum].style.display = "flex";
+}
 
+function enemyIdNone(idNum) {
+    enemyAvatar[idNum].style.display = "none";
+}
 btnStart.addEventListener("click", function (){
     //estamos en splash screen y queremos pasar a Introduction Screen
     setIntroductionScreen();
@@ -182,6 +188,26 @@ id3.addEventListener("click", function() {
     setBattle(2, 0, 1);
     loadDialogues(2, 2);
     
+})
+
+id1.addEventListener("mouseover", function() {
+    setEnemyID(0);
+})
+id2.addEventListener("mouseover", function() {
+    setEnemyID(1);
+})
+id3.addEventListener("mouseover", function() {
+    setEnemyID(2);
+})
+
+id1.addEventListener("mouseout", function() {
+    enemyIdNone(0);
+})
+id2.addEventListener("mouseout", function() {
+    enemyIdNone(1);
+})
+id3.addEventListener("mouseout", function() {
+    enemyIdNone(2);
 })
 
 // answerA.addEventListener("click", function (){
