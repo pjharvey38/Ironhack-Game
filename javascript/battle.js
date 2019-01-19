@@ -46,16 +46,6 @@ function countBattles() {
  dialogue[1] = new Dialogue(`Bueno, ¡creo que sé de qué vas! Típico votante de Vox, ¿qué es lo que esperas, salvar a las mujeres a lomos de tu caballo?`, `Eso te gustaría a ti, feminazi de pacotilla, solo las mujeres decentes de verdad se merecen el respeto y cuidado que necesitan de un hombre.`, `Con que esas tenemos, ¿no? Si crees que sabes tanto lo que necesitamos las mujeres, atrévete a desmostrarlo. ¡Que comience la batalla!`)
  dialogue[2] = new Dialogue(`Así que aquí tenemos a la típica mujer machista. No sé quién es peor... A ver, ¿qué es lo que opinas del feminismo?`, `Que hartas me tenéis las machorras de las feministas. Sois unas pesaditas. A ver cuándo os ponéis guapas y nos dejais al resto de mujeres en paz, que yo lo que quiero es que me abran la puerta y me cuiden, ¡como toda la vida de Dios!`, `¡Por la gran Madonna!¡Esto es peor de lo que me imaginaba! A ver si vamos aprendiendo que las feministas no son tus enemigas, ¡el patriarcado es tu enemigo! En fin, ¡que comience la batalla!`);
 
- function setScreenBlock(x) {
-   return x.style.display = "block"
- }
-
- function setScreenFlex(x) {
-  return x.style.display = "flex"
-}
-function screenNone(x) {
-  return x.style.display = "none"
-}
 
 
 function loadDialogues(num, index) {
