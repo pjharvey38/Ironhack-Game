@@ -93,11 +93,13 @@ function changeScreen() {
     if (totalScore == 3) {
         setTimeout(function() {
       setMapScreen();
+      screenNone(quizImg);
       
         }, 3000);
     } else if (totalScore == 6) {
         setTimeout(function() {
             setMapScreen();
+            screenNone(quizImg);
             
               }, 3000);
     } else if (totalScore == 9) {
@@ -170,20 +172,3 @@ id3.addEventListener("mouseout", function() {
     enemyIdNone(2);
 })
 
-anime.timeline({loop: true})
-  .add({
-    targets: '.ml15 .word',
-    scale: [14,1],
-    opacity: [0,1],
-    easing: "easeOutCirc",
-    duration: 800,
-    delay: function(el, i) {
-      return 800 * i;
-    }
-  }).add({
-    targets: '.ml15',
-    opacity: 0,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 1000
-  });
